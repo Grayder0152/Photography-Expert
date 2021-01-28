@@ -1,0 +1,76 @@
+@media screen and (max-width: 1440px){
+	body{
+		flex-flow: column;
+	}
+	.main,.menu{
+		width: 100%;
+		max-width: none;
+		max-height: none;
+	}
+}
+@media screen and (max-width: 1024px){
+	.main .logo{
+	width: 247px;
+	height: 247px;
+	font-size: 130px;
+}
+.main h1{
+	font-size: 85px;
+}
+.main p{
+	font-size: 32px;
+	line-height: 75px;
+}
+.main .line hr{
+	width: 600px;
+	height: 4px;
+}
+.main span{
+	font-size: 50px;
+}
+	.menu{
+		height: auto;
+	}
+	.menu .block_1,
+	.menu .block_2{
+		display: flex;
+		flex-flow: column;
+		/* padding: 0 20px; */
+
+	}
+	.menu .block_1 a, .menu .block_2 a{
+		justify-content: center;
+		height: 33.33vh;
+		/* margin-top: 30px; */
+	}
+	.menu .block_1 a span, .menu .block_2 a span {
+		font-size: 55px;
+	}
+	.menu .block_1 a::before,
+	.menu .block_2 a::before{
+    	width: 100%;
+    	left: 0;
+	}
+	.menu .block_1 a::after,
+	.menu .block_2 a::after{
+		height: 100px;
+	    top: auto;
+	    bottom: 0;
+		background: rgba(0, 0, 0, 0.5);
+	}
+	.contact ul li{
+		width: 65px;
+		height: 65px;
+	}
+	.contact ul li img{
+		width: 40px;
+	}
+	.menu .block_1 a:hover::before,
+	.menu .block_2 a:hover::before{
+	    background: #c7806a;
+		width: 100%;
+	}
+	.menu .block_1 a:hover::after{
+		height: 100%;
+	}
+}
