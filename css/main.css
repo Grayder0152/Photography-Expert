@@ -30,7 +30,8 @@ body{
     padding-left: 105px;
     position: relative;
 }
-.main::before{
+.main::before,
+body::before{
 	content: '';
 	position: absolute;
 	left: 0;
@@ -57,7 +58,8 @@ body{
     margin-bottom: 49px;
     z-index: 1;
 }
-.main h1{
+.main h1,
+header h1{
 	font-size: 64px;
 	line-height: 79.99%;
 	letter-spacing: -0.03em;
@@ -65,7 +67,8 @@ body{
 	text-shadow: 3px -1px 9px rgba(0, 0, 0, 0.25);
 	z-index: 1;
 }
-.main p{
+.main p,
+header p{
 	font-size: 24px;
 	line-height: 51px;
 	letter-spacing: 0.5em;
@@ -92,7 +95,7 @@ body{
 	margin: 16px 11px;
 	z-index: 1;
 }
-.menu{
+section.menu{
     width: 64%;
     max-width: 1232px;
     min-width: 750px;
@@ -188,13 +191,16 @@ body{
 .menu .block_2 a:hover::after{
 	height: 100%
 }
-.contact{
+.contact,
+footer .bg{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	padding: 34px 21px 37px;
+	z-index: 1;
 }
-.contact button{
+.contact button,
+footer button{
 	width: 146px;
 	background: #FFFFFF;
 	box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25);
@@ -211,14 +217,17 @@ body{
 	text-transform: uppercase;
 	cursor: pointer;
 }
-.contact button img{
+.contact button img,
+footer button img{
 	width: 30px;
 	margin-right: 8px;
 }
-.contact ul{
+.contact ul,
+footer ul{
 	column-count: 4;
 } 
-.contact ul li{
+.contact ul li,
+footer ul li{
 	width: 35px;
 	height: 35px;
 	background-color: #fff;
@@ -229,18 +238,22 @@ body{
 	align-items: center;
 	cursor: pointer;
 }
-.contact ul li a{
+.contact ul li a,
+footer ul li a{
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
-.contact ul li img{
+.contact ul li img,
+footer ul li img{
 	width: 26px;
 	filter: drop-shadow(3px 1px 1px #77575A);
 }
-.contact ul li:hover{
+.contact ul li:hover,
+footer ul li:hover{
 	border: 2px solid #000;
 }
-.contact button:hover{
+.contact button:hover,
+footer button:hover{
 	box-shadow:0px 0px 20px #000;
 }

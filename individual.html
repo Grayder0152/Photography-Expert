@@ -6,31 +6,54 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;0,700;1,300&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/main.css">
+
+	<link rel="stylesheet" href="css/category.css">
 	<link rel="stylesheet" href="css/adaptive.css">
 </head>
 <body>
 	<div class="wrapper">
 		<header>
-			<div class="logo">MK</div>
 			<h1>Marina Krepchuk</h1>
 			<p>Photography Expert</p>
 			<ul class="menu">
-				<li><a href="#">Home</a></li>
-				<li><a href="#">Individual</a></li>
-				<li><a href="#">Baby</a></li>
-				<li><a href="#">Family</a></li>
-				<li><a href="#">Lovestory</a></li>
-				<li><a href="#">Wedding</a></li>
+				<li><a href="index.html">Home</a></li>
+				<li class="active"><a href="#">Individual</a></li>
+				<li><a href="baby.html">Baby</a></li>
+				<li><a href="family.html">Family</a></li>
+				<li><a href="lovestory.html">Lovestory</a></li>
+				<li style="border:0;"><a href="wedding.html">Wedding</a></li>
 			</ul>
 		</header>
+		<article>
+			<h1>Individual<hr></h1>
+			<div class="content">
+				<div class="galery">
+					<div style="background-image: url('images/big_ind_1.png')">
+						<img src="images/small_ind_1.png">
+					</div>
+					<div style="background-image: url('images/big_ind_2.png')">
+						<img src="images/small_ind_2.png">
+					</div>
+					<div style="background-image: url('images/big_ind_3.png')">
+						<img src="images/small_ind_3.png">
+					</div>
+				</div>
+				<div class="price-list">
+					<div>Оставить заявку</div>
+					<div class="active">Готовые проекты</div>
+				</div>
+			</div>
+		</article>
 		<footer>
-			<button><img src="images/share.svg">Share</button>
-			<ul>
-				<li><a href="#"><img src="images/facebook.svg"></a></li>
-				<li><a href="#"><img src="images/vk.svg"></a></li>
-				<li><a href="#"><img src="images/instagram.svg"></a></li>
-				<li><a href="#"><img src="images/twitter.svg"></a></li>
-			</ul>
+			<div class="bg">
+				<button><img src="images/share.svg">Share</button>
+				<ul>
+					<li><a href="#"><img src="images/facebook.svg"></a></li>
+					<li><a href="#"><img src="images/vk.svg"></a></li>
+					<li><a href="#"><img src="images/instagram.svg"></a></li>
+					<li><a href="#"><img src="images/twitter.svg"></a></li>
+				</ul>
+			</div>
 		</footer>
 	</div>
 </body>
