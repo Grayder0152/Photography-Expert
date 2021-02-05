@@ -38,10 +38,15 @@
 	body{
 		flex-flow: column;
 	}
-	.main,.menu{
+	section.main,
+	section.menu{
 		width: 100%;
+		margin-right: auto;
 		max-width: none;
 		max-height: none;
+	}
+	section.menu{
+		height: auto;
 	}
 	/* /for index */
 
