@@ -99,6 +99,9 @@ article .galery div{
 	width: 315px;
 	height: 454px;
 	position: relative;
+	background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 article .galery div img{
 	position: absolute;
@@ -112,30 +115,39 @@ article .price-list{
 }
 article .price-list div{
 	width: 355px;
-	padding: 25px 40px;
 	background: #FFFFFF;
 	margin-top: 63px;
+	padding: 25px 40px;
+	font-family: 'Roboto';
+
 	font-size: 24px;
 	line-height: 79.99%;
 	letter-spacing: -0.03em;
-	color: #8F554E;
-	z-index: 1;
+	color: #3E2D2F;
 	position: relative;
+	text-transform: uppercase;
+	text-align: center;
 }
 article .price-list div.active{
 	width: 463px;
 }
-article .price-list div::before{
+article .price-list div::before,
+article .price-list div::after{
 	content: '';
 	position: absolute;
 	width: 148px;
 	height: 49px;
-	background-color: #FFFFFF;
+	background-color: #3E2D2F;
 	opacity: 0.6;
 	left: -40px;
 	top: 50%;
 	transform: translateY(-50%);
 	z-index: -1;
+}
+article .price-list div::after{
+	display: none;
+	right: -40px;
+	left: auto;
 }
 footer{
 	width: 100%;
