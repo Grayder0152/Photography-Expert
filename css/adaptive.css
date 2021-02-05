@@ -16,13 +16,19 @@
 	}
 	article .price-list div::before,
 	article .price-list div::after{
-		height: 39px;
+		height: 45px;
 		left: -70px;
 	}
 	article .price-list div::after{
 		display: block;
 		right: -70px;
 		left: auto;
+	}
+	article .price-list div:hover::before{
+		left: -30px;
+	}
+	article .price-list div:hover::after{
+		right: -30px;
 	}
 
 	/* /for category */
@@ -40,10 +46,28 @@
 	/* /for index */
 
 	/* for category */
-
+	header h1{
+		font-size: 65px;
+	}
+	header p{
+		font-size: 28px;
+		letter-spacing: 0.5em;
+	}
+	article h1{
+		font-size: 50px;
+	}
 	article .galery{
 		flex-flow: column;
 		align-items: center;
+	}
+	article .galery div {
+    	width: 500px;
+    	height: 730px;
+		margin-bottom: 200px;
+	}
+	article .galery div img {
+	    width: 300px;
+	    bottom: -170px;
 	}
 
 	/* /for category */
@@ -114,4 +138,50 @@
 		height: 100%;
 	}
 	/* /for index */
+	header .menu {
+	    display: grid;
+	    grid-template-columns: 1fr 1fr 1fr;
+	    grid-gap: 3px 0px;
+	}
+	header .menu li{
+		width: auto;
+		border: 0;
+	}
+	header .menu li a{
+		font-size: 30px;
+	}
+	article hr{
+		width: 65%;
+	}
+	article .price-list div {
+	    width: 460px;
+	    padding: 35px;
+	    font-size: 35px;
+	}
+	article .price-list a:last-child div{
+   		width: 600px;
+   		padding: 30px;
+	}
+
+	.contact, footer .bg{
+		padding: 60px;
+	}
+	.contact button,
+	footer button{
+		width: 220px;
+		font-size: 35px;
+		padding: 25px 8px;
+	}
+	.contact button img,
+	footer button img{
+		width: 40px;
+	}
+	.contact ul li, footer ul li{
+		width: 65px;
+		height: 65px;
+	}
+	.contact ul li img, footer ul li img{
+		width: 45px;
+	}
 }
+

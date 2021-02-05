@@ -34,7 +34,6 @@ header .menu li{
 	position: relative;
 }
 header .menu a{
-	font-weight: bold;
 	font-size: 25px;
 	line-height: 79.99%;
 	letter-spacing: -0.03em;
@@ -68,7 +67,7 @@ article h1{
 	font-weight: bold;
 	font-size: 40px;
 	line-height: 79.99%;
-	letter-spacing: -0.03em;
+	letter-spacing: 0.1em;
 	color: #FFFFFF;
 	text-transform: uppercase;
 	position: relative;
@@ -105,8 +104,8 @@ article .galery div{
 }
 article .galery div img{
 	position: absolute;
-	top: 295px;
-	left: 195px;
+	bottom: -100px;
+	right: -70px;
 }
 article .price-list{
     display: flex;
@@ -119,7 +118,6 @@ article .price-list div{
 	margin-top: 63px;
 	padding: 25px 40px;
 	font-family: 'Roboto';
-
 	font-size: 24px;
 	line-height: 79.99%;
 	letter-spacing: -0.03em;
@@ -127,8 +125,10 @@ article .price-list div{
 	position: relative;
 	text-transform: uppercase;
 	text-align: center;
+	transition: 0.3s;
 }
-article .price-list div.active{
+
+article .price-list a:last-child div{
 	width: 463px;
 }
 article .price-list div::before,
@@ -136,18 +136,26 @@ article .price-list div::after{
 	content: '';
 	position: absolute;
 	width: 148px;
-	height: 49px;
+	height: 45px;
 	background-color: #3E2D2F;
 	opacity: 0.6;
 	left: -40px;
 	top: 50%;
 	transform: translateY(-50%);
 	z-index: -1;
+	transition: 0.3s;
 }
 article .price-list div::after{
 	display: none;
 	right: -40px;
 	left: auto;
+}
+article .price-list div:hover{
+	background-color:#E5E5E5;
+	cursor: pointer;
+}
+article .price-list div:hover::before{
+	left: -60px;
 }
 footer{
 	width: 100%;

@@ -7,7 +7,8 @@
 	list-style-type: none;
 	box-sizing: border-box;
 	color: #000;
-	font-family: 'Times New Roman';
+	font-family: 'Roboto';
+	font-weight: 300;
 }
 body{
 	width: 100%;
@@ -15,7 +16,6 @@ body{
 	margin: 0 auto;
 	display: flex;
 	background: rgba(180, 88, 76, 0.6);
-
 }
 .main{
 	width: 36%;
@@ -201,17 +201,16 @@ footer .bg{
 }
 .contact button,
 footer button{
-	width: 146px;
+	width: 160px;
 	background: #FFFFFF;
 	box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25);
 	border-radius: 5px;
 	padding: 14px 8px;
 	display: flex;
     align-items: center;
-    font-family: 'Roboto';
+    justify-content: center;
     font-weight: bold;
 	font-size: 24px;
-	line-height: 99%;
 	letter-spacing: 0.16em;
 	text-shadow: 5px 3px 10px rgba(119, 87, 90, 0.2);
 	text-transform: uppercase;
@@ -228,8 +227,8 @@ footer ul{
 } 
 .contact ul li,
 footer ul li{
-	width: 35px;
-	height: 35px;
+	width: 55px;
+	height: 55px;
 	background-color: #fff;
 	border-radius: 50%;
 	margin-left: 50px;
@@ -246,7 +245,7 @@ footer ul li a{
 }
 .contact ul li img,
 footer ul li img{
-	width: 26px;
+	width: 35px;
 	filter: drop-shadow(3px 1px 1px #77575A);
 }
 .contact ul li:hover,
