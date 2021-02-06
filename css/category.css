@@ -1,0 +1,170 @@
+body{	
+	background-image: url('../images/big-bg.png');
+	position: relative;
+}
+.wrapper{
+	width: 100%;
+	max-width: 1920px;
+}
+header{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-flow: column;
+}
+header h1{
+	font-size: 50px;
+	margin-top: 35px;
+}
+header p{
+	letter-spacing: 0.3em;
+}
+header .menu{
+	width: 100%;
+	display: flex;
+	margin-top: 20px;
+}
+header .menu li{
+	width: 320px;
+	background: #8F554E;
+	padding: 35px 0 36px;
+	border-right: 1px solid #fff;
+	z-index: 1;
+	position: relative;
+}
+header .menu a{
+	font-size: 25px;
+	line-height: 79.99%;
+	letter-spacing: -0.03em;
+	color: #FFFFFF;
+	text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+header .menu li:hover,
+.active{
+	background: #FFFFFF!important;
+}
+header .menu li:hover a,
+.active a{
+	color: #3E2D2F!important;
+}
+article{
+	width: 100%;
+	display: flex;
+	flex-flow: column;
+	z-index: 1;
+	padding: 50px 0 157px 100px;
+}
+article h1{
+	font-weight: bold;
+	font-size: 40px;
+	line-height: 79.99%;
+	letter-spacing: 0.1em;
+	color: #FFFFFF;
+	text-transform: uppercase;
+	position: relative;
+	z-index: 1;
+}
+article hr{
+	width: 45%;
+	height: 2px;
+	position: absolute;
+	bottom: -20px;
+	left: -3px;
+	background: #fff;
+	z-index: 1;
+}
+article .content{
+	display: flex;
+	justify-content: space-between;
+	z-index: 1;
+	margin-top: 45px;
+}
+article .galery{
+	width: 100%;
+	max-width: 1190px;
+	display: flex;
+	justify-content: space-between;
+}
+article .galery div{
+	width: 315px;
+	height: 454px;
+	position: relative;
+	background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+article .galery div img{
+	position: absolute;
+	bottom: -100px;
+	right: -70px;
+}
+article .price-list{
+    display: flex;
+    flex-flow: column;
+    align-items: flex-end;
+}
+article .price-list div{
+	width: 355px;
+	background: #FFFFFF;
+	margin-top: 63px;
+	padding: 25px 40px;
+	font-family: 'Roboto';
+	font-size: 24px;
+	line-height: 79.99%;
+	letter-spacing: -0.03em;
+	color: #3E2D2F;
+	position: relative;
+	text-transform: uppercase;
+	text-align: center;
+	transition: 0.3s;
+}
+
+article .price-list a:last-child div{
+	width: 463px;
+}
+article .price-list div::before,
+article .price-list div::after{
+	content: '';
+	position: absolute;
+	width: 148px;
+	height: 45px;
+	background-color: #3E2D2F;
+	opacity: 0.6;
+	left: -40px;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: -1;
+	transition: 0.3s;
+}
+article .price-list div::after{
+	display: none;
+	right: -40px;
+	left: auto;
+}
+article .price-list div:hover{
+	background-color:#E5E5E5;
+	cursor: pointer;
+}
+article .price-list div:hover::before{
+	left: -60px;
+}
+footer{
+	width: 100%;
+	display: flex;
+}
+
+footer .bg{
+	width: 100%;
+	height: 100%;
+	background: #8F554E;
+	z-index: 1;
+}
