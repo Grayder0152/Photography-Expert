@@ -7,7 +7,6 @@ from django.utils.safestring import mark_safe
 class CategoriesAdmin(admin.ModelAdmin):
     list_display = ('id', 'title', 'slug')
     list_display_links = ('title',)
-    readonly_fields = ('id', 'title', 'slug')
 
 
 @admin.register(Images)

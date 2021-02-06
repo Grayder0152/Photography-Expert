@@ -51,11 +51,14 @@ WSGI_APPLICATION = 'Photography_Expert.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'ddk6ctr801f4aa',
+        'USER': 'sluldompbnthaf',
+        'PASSWORD': 'cd469468311439312553c0061cc99a0155dabfc057868677ab30da3f1cefbaf8',
+        'HOST': 'ec2-52-205-3-3.compute-1.amazonaws.com',
+        'PORT': '5432',
     }
 }
-
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',

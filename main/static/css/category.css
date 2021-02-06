@@ -113,6 +113,10 @@ article .price-list{
     display: flex;
     flex-flow: column;
     align-items: flex-end;
+    position: sticky;
+    right: 0;
+    top: 50px;
+    max-height: 270px;
 }
 article .price-list div{
 	width: 355px;

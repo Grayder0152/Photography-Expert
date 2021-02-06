@@ -170,7 +170,7 @@ section.menu{
 .menu .block_1 a::after{
 	height: 0;
     top: 0;
-	background: rgba(180, 88, 76, 0.6);
+	background: rgba(0, 0, 0, 0.5);
 }
 .menu .block_2 a::after{
     height: 3%;
@@ -186,7 +186,7 @@ section.menu{
 	width: 80%;
 }
 .menu .block_1 a:hover::after{
-	height: 80%;
+	height: 100%;
 }
 .menu .block_2 a:hover::after{
 	height: 100%
