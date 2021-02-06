@@ -7,7 +7,7 @@ SECRET_KEY = '-j=ri%2mtyz-isic%23e!#gi-hg*rje*3v+%dy#sxo-si+%3n@'
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['damp-taiga-56869.herokuapp.com', '127.0.0.1', '0.0.0.0']
+ALLOWED_HOSTS = ['photography-expert.herokuapp.com', '127.0.0.1', '0.0.0.0']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
