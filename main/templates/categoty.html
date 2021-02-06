@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Marina Krepchuk</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;0,700;1,300&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/category.css' %}">
+    <link rel="stylesheet" href="{% static 'css/adaptive.css' %}">
+</head>
+<body>
+<div class="wrapper">
+    <header>
+        <h1>Marina Krepchuk</h1>
+        <p>Photography Expert</p>
+        <ul class="menu">
+            <li>
+                <a href="{% url 'index' %}">Home</a>
+            </li>
+            <li class="{% if request.path == '/categories/individual' %}active{% endif %}">
+                <a href="{% url 'category' slug='individual' %}">Individual</a>
+            </li>
+            <li class="{% if request.path == '/categories/baby' %}active{% endif %}">
+                <a href="{% url 'category' slug='baby' %}">Baby</a>
+            </li>
+            <li class="{% if request.path == '/categories/family' %}active{% endif %}">
+                <a href="{% url 'category' slug='family' %}">Family</a>
+            </li>
+            <li class="{% if request.path == '/categories/lovestory' %}active{% endif %}">
+                <a href="{% url 'category' slug='lovestory' %}">Lovestory</a>
+            </li>
+            <li class="{% if request.path == '/categories/wedding' %}active{% endif %}" style="border:0;"><a
+                    href="{% url 'category' slug='wedding' %}">Wedding</a>
+            </li>
+        </ul>
+    </header>
+    <article>
+        <h1>{{ title }}
+            <hr>
+        </h1>
+        <div class="content">
+            <div class="galery">
+                {% if images %}
+                {% for image in images %}
+                <div style="background-image: url('{{ image.big_image.url }}')">
+                    {% if image.small_image %}
+                    <img src="{{ image.small_image.url }}">
+                    {% endif %}
+                </div>
+                {% endfor %}
+                {% else %}
+                <h1>Галерея пуста</h1>
+                {% endif %}
+            </div>
+            <div class="price-list">
+                <a href="https://t.me/marinakrepchuk_photo">
+                    <div>Записатся</div>
+                </a>
+                <a href="https://instagram.com/photo_krepchuk_marina?igshid=acdx1ymxrlyq">
+                    <div>Оставить отзыв</div>
+                </a>
+            </div>
+        </div>
+        <div class="modal">
+
+        </div>
+    </article>
+    <footer>
+        <div class="bg">
+            <button><img src="{% static 'images/icons/share.svg' %}">
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://evileg.com/ru/{{ article.get_absolute_url }}"
+                   onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"
+                   target="_blank" rel="nofollow">
+                    Share
+                </a>
+            </button>
+            <ul>
+                <li><a href="https://www.facebook.com/romkagirl"><img
+                        src="{% static 'images/icons/facebook.svg' %}"></a></li>
+                <li><a href="https://t.me/marinakrepchuk_photo"><img src="{% static 'images/icons/telegram.svg' %}"></a>
+                </li>
+                <li><a href="https://instagram.com/photo_krepchuk_marina?igshid=acdx1ymxrlyq"><img
+                        src="{% static 'images/icons/instagram.svg' %}"></a></li>
+                <li>
+                    <a href="https://invite.viber.com/?g2=AQAXaVaQhz%2FRN0zX3Ucze3LUNUbTjDBfuIcJa7HhEtfkF5gqLUpSrhbcpu1sjp%2BU"><img
+                            src="{% static 'images/icons/viber.svg' %}"></a></li>
+            </ul>
+        </div>
+    </footer>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+        crossorigin="anonymous"></script>
+<script>
+    $('.galery img').click(function(){
+        $('.modal').html("<img src='"+$(this).attr("src")+"'>").css('display','flex');
+    });
+<!--    $('.galery div').click(function(){-->
+<!--        var path = $(this).attr("style").slice(23,-2);-->
+<!--        $('.modal').html("<img src='"+path+"'>").show();-->
+<!--    });-->
+    $('.modal').click(function(){
+        $(this).css('display','none');
+    });
+</script>
+</body>
+</html>
