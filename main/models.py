@@ -22,8 +22,6 @@ class Images(models.Model):
     def __str__(self):
         return f'{self.category}-{self.id}'
 
-    print(big_image)
-
     class Meta:
         verbose_name = "Фотографию"
         verbose_name_plural = "Фотографии"
