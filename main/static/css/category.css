@@ -1,10 +1,10 @@
 body{	
-	background-image: url('../images/big-bg.png');
 	position: relative;
 }
 .wrapper{
 	width: 100%;
 	max-width: 1920px;
+	background-image: url('../images/big-bg.png');
 }
 header{
 	width: 100%;
@@ -37,7 +37,7 @@ header .menu a{
 	font-size: 25px;
 	line-height: 79.99%;
 	letter-spacing: -0.03em;
-	color: #FFFFFF;
+	color: #fff;
 	text-transform: uppercase;
     display: flex;
     justify-content: center;
@@ -50,7 +50,7 @@ header .menu a{
 }
 header .menu li:hover,
 .active{
-	background: #FFFFFF!important;
+	background: #fff!important;
 }
 header .menu li:hover a,
 .active a{
@@ -68,7 +68,7 @@ article h1{
 	font-size: 40px;
 	line-height: 79.99%;
 	letter-spacing: 0.1em;
-	color: #FFFFFF;
+	color: #fff;
 	text-transform: uppercase;
 	position: relative;
 	z-index: 1;
@@ -108,6 +108,7 @@ article .galery div img{
 	position: absolute;
 	bottom: -100px;
 	right: -70px;
+	cursor: zoom-in;
 }
 article .price-list{
     display: flex;
@@ -120,7 +121,7 @@ article .price-list{
 }
 article .price-list div{
 	width: 355px;
-	background: #FFFFFF;
+	background: #fff;
 	margin-top: 63px;
 	padding: 25px 40px;
 	font-family: 'Roboto';
@@ -133,7 +134,6 @@ article .price-list div{
 	text-align: center;
 	transition: 0.3s;
 }
-
 article .price-list a:last-child div{
 	width: 463px;
 }
@@ -163,31 +163,23 @@ article .price-list div:hover{
 article .price-list div:hover::before{
 	left: -60px;
 }
-article .modal{
-    width:100%;
-    height:100vh;
-    display: none;
-    justify-content: center;
-    align-items: center;
-    position:fixed;
-    left:0;
-    top:0;
-    background:#000000a1;
-    z-index:2;
-}
 article .modal img{
     width: 30%;
     max-width: 800px;
     min-width: 400px;
+}
+article .top_button{
+    width:70px;
+    height:70px;
+    padding:10px;
+    border-radius:50%;
+    background-color:#fff;
+    position: fixed;
+    bottom: 150px;
+    right: 70px;
+    display: none;
+    opacity:.6;
+    z-index:1;
+    cursor:pointer;
+}
 
-}
-footer{
-	width: 100%;
-	display: flex;
-}
-footer .bg{
-	width: 100%;
-	height: 100%;
-	background: #8F554E;
-	z-index: 1;
-}

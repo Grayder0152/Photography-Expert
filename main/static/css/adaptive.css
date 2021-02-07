@@ -174,25 +174,27 @@
    		width: 600px;
    		padding: 30px;
 	}
-
-	.contact, footer .bg{
+    article .top_button{
+        width: 90px;
+        height: 90px;
+        bottom:220px;
+    }
+	footer .bg{
 		padding: 60px;
 	}
-	.contact button,
 	footer button{
 		width: 220px;
 		font-size: 35px;
 		padding: 25px 8px;
 	}
-	.contact button img,
 	footer button img{
 		width: 40px;
 	}
-	.contact ul li, footer ul li{
+	footer ul li{
 		width: 65px;
 		height: 65px;
 	}
-	.contact ul li img, footer ul li img{
+	footer ul li img{
 		width: 45px;
 	}
 }

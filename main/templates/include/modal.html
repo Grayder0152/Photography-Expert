@@ -1,0 +1,16 @@
+{% load static %}
+
+<div class="modal">
+    <div class="share">
+        <h1>Marina Krepchuk</h1>
+        <p>Photography Expert</p>
+        <section>
+            <div class="sharethis-inline-share-buttons"></div>
+            <input type="text" value="{{ request.build_absolute_uri }}" id="url"
+                   style="width:0;">
+            <button onclick="myFunction()"><img src="{% static 'images/icons/link.svg' %}"></button>
+        </section>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+<script src="{% static 'js/script.js' %}"></script>
