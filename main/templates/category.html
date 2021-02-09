@@ -2,6 +2,7 @@
 {% load static %}
 <html>
 <head>
+    <title>Marina Krepchuk | {{title}}</title>
     <link rel="stylesheet" href="{% static 'css/category.css' %}">
     {% include 'include/head.html' %}
 </head>
@@ -39,7 +40,7 @@
             <div class="galery">
                 {% if images %}
                 {% for image in images %}
-                <div style="background-image: url('{{ image.big_image.url }}')">
+                <div style="background-image: url('{{image.big_image.url }}')">
                     {% if image.small_image %}
                     <img src="{{ image.small_image.url }}">
                     {% endif %}

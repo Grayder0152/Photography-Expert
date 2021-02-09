@@ -48,9 +48,6 @@
 	section.menu{
 		height: auto;
 	}
-	article .modal img{
-        width: 60%;
-    }
 	/* /for index */
 
 	/* for category */
@@ -85,9 +82,6 @@
 }
 @media screen and (max-width: 1024px){
 	/* for index */
-	article .modal img{
-        width: 80%;
-    }
 	.main .logo{
 		width: 247px;
 		height: 247px;

@@ -19,7 +19,7 @@ $('.top_button').click(function(){
 
 
 $('.galery img').click(function(){
-    $('.modal').html("<img src='"+$(this).attr("src")+"'>").css('display','flex');
+    $('.modal').append("<img class='zoom_image' src='"+$(this).attr("src")+"'>").css('display','flex');
 });
 $('.share_but').click(function(){
     $('.modal .share').css('display','flex');
@@ -27,4 +27,7 @@ $('.share_but').click(function(){
 });
 $('.modal').click(function(){
     $(this).css('display','none');
+    $('.zoom_image').remove();
+    $('.modal .share').css('display','none');
+
 });

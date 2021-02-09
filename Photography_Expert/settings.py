@@ -5,7 +5,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 SECRET_KEY = '-j=ri%2mtyz-isic%23e!#gi-hg*rje*3v+%dy#sxo-si+%3n@'
 
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['photography-expert.herokuapp.com', '127.0.0.1', '0.0.0.0']
 
@@ -86,5 +86,5 @@ STATIC_DIR = os.path.join(BASE_DIR, 'static')
 STATICFILES_DIR = [STATIC_DIR]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
