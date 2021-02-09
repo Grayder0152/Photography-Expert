@@ -204,6 +204,10 @@ section.menu{
     background:#000000a1;
     z-index:2;
 }
+.modal img{
+    max-height:80vh;
+}
+
 .modal .share{
     width:600px;
     height:250px;

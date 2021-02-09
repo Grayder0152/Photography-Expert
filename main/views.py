@@ -17,4 +17,4 @@ class CategoryView(View):
             'images': images,
             'title': category.title
         }
-        return render(request, 'categoty.html', context)
+        return render(request, 'category.html', context)
