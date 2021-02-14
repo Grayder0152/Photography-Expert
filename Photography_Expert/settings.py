@@ -3,9 +3,6 @@ import os
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-SECRET_KEY = '-j=ri%2mtyz-isic%23e!#gi-hg*rje*3v+%dy#sxo-si+%3n@'
-
-DEBUG = False
 
 ALLOWED_HOSTS = ['photography-expert.herokuapp.com', '127.0.0.1', '0.0.0.0']
 
@@ -18,6 +15,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_cleanup',
     'main',
+    'storages'
 ]
 
 MIDDLEWARE = [
@@ -47,6 +45,17 @@ TEMPLATES = [
         },
     },
 ]
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'ddk6ctr801f4aa',
+        'USER': 'sluldompbnthaf',
+        'PASSWORD': 'cd469468311439312553c0061cc99a0155dabfc057868677ab30da3f1cefbaf8',
+        'HOST': 'ec2-52-205-3-3.compute-1.amazonaws.com',
+        'PORT': '5432',
+    }
+}
 
 WSGI_APPLICATION = 'Photography_Expert.wsgi.application'
 
@@ -82,9 +91,11 @@ USE_L10N = True
 USE_TZ = True
 
 STATIC_URL = '/static/'
-STATIC_DIR = os.path.join(BASE_DIR, 'static')
-STATICFILES_DIR = [STATIC_DIR]
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+try:
+    from .local_settings import *
+except ImportError:
+    from .prod_settings import *
